@@ -8,21 +8,21 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #7c3aed;
-            --primary-dark: #5b21b6;
-            --secondary: #10b981;
-            --accent: #ec4899;
-            --dark: #0f172a;
-            --darker: #020617;
-            --light: #f8fafc;
-            --gray: #94a3b8;
-            --card-bg: rgba(15, 23, 42, 0.8);
+            --primary: #ff69b4; /* Changed to pink */
+            --primary-dark: #d94d9b; /* Darker pink */
+            --secondary: #ff85c2; /* Lighter pink */
+            --accent: #ff1493; /* Deep pink */
+            --dark: #333333; /* Dark gray for text */
+            --darker: #ffd6eb; /* Baby pink background */
+            --light: #333333; /* Black text */
+            --gray: #666666; /* Medium gray */
+            --card-bg: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
             --transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
             --section-padding: 100px;
-            --glass: rgba(15, 23, 42, 0.5);
-            --glass-border: rgba(255, 255, 255, 0.08);
-            --neon-glow: 0 0 10px rgba(124, 58, 237, 0.5);
+            --glass: rgba(255, 255, 255, 0.5);
+            --glass-border: rgba(255, 105, 180, 0.3);
+            --neon-glow: 0 0 10px rgba(255, 105, 180, 0.5);
         }
 
         * {
@@ -47,8 +47,8 @@
             width: 100%;
             height: 100%;
             background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+                linear-gradient(rgba(255, 105, 180, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 105, 180, 0.05) 1px, transparent 1px);
             background-size: 40px 40px;
             z-index: -1;
             pointer-events: none;
@@ -64,7 +64,7 @@
             z-index: 1000;
             transition: var(--transition);
             backdrop-filter: blur(10px);
-            background: rgba(2, 6, 23, 0.6);
+            background: rgba(255, 214, 235, 0.8);
             border-bottom: 1px solid var(--glass-border);
         }
 
@@ -81,7 +81,7 @@
             font-family: 'JetBrains Mono', monospace;
             font-size: 1.8rem;
             font-weight: 700;
-            color: white;
+            color: var(--light);
             text-decoration: none;
             display: flex;
             align-items: center;
@@ -141,7 +141,7 @@
 
         .nav-links a:hover {
             color: var(--primary);
-            background: rgba(124, 58, 237, 0.1);
+            background: rgba(255, 105, 180, 0.1);
         }
 
         .hamburger {
@@ -235,7 +235,7 @@
 
         .btn:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.4);
         }
 
         .btn-outline {
@@ -382,7 +382,7 @@
         }
 
         .tag {
-            background: rgba(124, 58, 237, 0.15);
+            background: rgba(255, 105, 180, 0.15);
             color: var(--primary);
             padding: 6px 15px;
             border-radius: 50px;
@@ -392,12 +392,12 @@
         }
 
         .tag.green {
-            background: rgba(16, 185, 129, 0.15);
+            background: rgba(255, 133, 194, 0.15);
             color: var(--secondary);
         }
 
         .tag.pink {
-            background: rgba(236, 72, 153, 0.15);
+            background: rgba(255, 20, 147, 0.15);
             color: var(--accent);
         }
 
@@ -446,12 +446,12 @@
 
         .contact-email:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(124, 58, 237, 0.4);
+            box-shadow: 0 15px 30px rgba(255, 105, 180, 0.4);
         }
 
         /* Footer */
         footer {
-            background: rgba(2, 6, 23, 0.8);
+            background: rgba(255, 214, 235, 0.8);
             padding: 3rem 0;
             text-align: center;
             border-top: 1px solid var(--glass-border);
@@ -510,7 +510,7 @@
                 right: -100%;
                 height: 100vh;
                 width: 70%;
-                background: rgba(2, 6, 23, 0.95);
+                background: rgba(255, 214, 235, 0.95);
                 backdrop-filter: blur(20px);
                 flex-direction: column;
                 align-items: center;
@@ -536,7 +536,7 @@
                 display: block;
                 width: 30px;
                 height: 3px;
-                background: white;
+                background: var(--light);
                 margin: 6px 0;
                 transition: var(--transition);
                 border-radius: 3px;
@@ -712,7 +712,7 @@
                     </div>
                 </div>
                 <div class="project-card fade-in">
-                    <div class="project-img" style="background: linear-gradient(45deg, #6a5acd, #9370db);">
+                    <div class="project-img" style="background: linear-gradient(45deg, #ff85c2, #ffb6c1);">
                         Java Inventory
                     </div>
                     <div class="project-content">
@@ -726,7 +726,7 @@
                     </div>
                 </div>
                 <div class="project-card fade-in">
-                    <div class="project-img" style="background: linear-gradient(45deg, var(--secondary), #90ee90);">
+                    <div class="project-img" style="background: linear-gradient(45deg, var(--secondary), #ffc0cb);">
                         Task Reminder
                     </div>
                     <div class="project-content">
@@ -815,10 +815,10 @@
         window.addEventListener('scroll', () => {
             const header = document.getElementById('header');
             if (window.scrollY > 50) {
-                header.style.background = "rgba(2, 6, 23, 0.9)";
-                header.style.boxShadow = "0 5px 30px rgba(0, 0, 0, 0.2)";
+                header.style.background = "rgba(255, 214, 235, 0.95)";
+                header.style.boxShadow = "0 5px 30px rgba(0, 0, 0, 0.1)";
             } else {
-                header.style.background = "rgba(2, 6, 23, 0.6)";
+                header.style.background = "rgba(255, 214, 235, 0.8)";
                 header.style.boxShadow = "none";
             }
         });
